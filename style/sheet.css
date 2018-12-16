@@ -1,0 +1,23 @@
+p {
+	margin: 0;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+#header {
+	display: flex;
+	width: 100%;
+	font-size: 200%;
+	height: 200px;
+	background-color: silver;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+
+}
+@media all and (min-width: 46em) {
+	#header {
+		background-color: green;
+	}
+}
