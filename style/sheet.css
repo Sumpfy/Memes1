@@ -1,11 +1,26 @@
-p {
-	margin: 0;
+/*allgemeine Fehlervermeidung; Standard-Styles*/
+
+html {
+	font-size: 16px;
 }
 body {
   font-family: Arial;
   margin: 0;
 }
+p {
+	margin: 0;
+}
+a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+/*Default Style = Mobile ------------------------------------*/
 #header {
+	/* Banner */
 	display: flex;
 	width: 100%;
 	font-size: 200%;
@@ -16,8 +31,69 @@ body {
 	justify-content: center;
 
 }
+/* Headline Animation */
+#headline {
+	transition: 0.3s ease;
+}
+
+a#headline:hover, a#headline:hover {
+	font-size: 110%;
+}
+
+/* NAVIGATION */
+#navbar {
+	/* Navigation -> Menu */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: auto;
+	background-color: #5DB8FE;
+
+}
+
+.navitem {
+	/* Navigation -> Elemente der Navigation */
+	flex-basis: auto;
+	width: 100%;
+	margin: 0;
+	padding: 1rem 0 1rem 0;
+
+	background-color: blue;
+	box-sizing: border-box;
+	color: white;
+	text-align: center;
+
+	transition: 0.25s ease;
+
+}
+
+
+a.navitem:link, a.navitem:visited {
+	color: white;
+}
+
+a.navitem:hover, a.navitem:active {
+/*font-weight: bold; */
+	background-color: #34709E;
+	text-decoration: none;
+}
+
+/* Tablet Style --------------------------------------------*/
 @media all and (min-width: 46em) {
 	#header {
 		background-color: green;
 	}
+
+	#navbar {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
+	.navitem {
+		width: auto;
+		padding: 1rem 1rem 1rem 1rem;
+	}
 }
+
+/*END NAVIGATION*/
