@@ -17,6 +17,10 @@ a:link, a:visited {
 a:hover, a:active {
   text-decoration: underline;
 }
+/*Variablen / Deklarationen / Farben / Größen */
+
+--navigationHeight: 2rem; 
+
 
 /*Default Style = Mobile ------------------------------------*/
 #header {
@@ -45,8 +49,7 @@ a#headline:hover, a#headline:hover {
 	/* Navigation -> Menu */
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	height: auto;
+	height: var(--navigationHeight);
 	background-color: #5DB8FE;
 
 }
@@ -78,6 +81,29 @@ a.navitem:hover, a.navitem:active {
 	text-decoration: none;
 }
 
+.navlist {
+
+	flex-basis: auto;
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+	text-align: center;
+
+	transition: 0.25s ease;
+
+	display: flex;
+	flex-direction: column;
+
+}
+.navlist a ~ a {
+	display: none;
+}
+
+.navlist:hover a ~ a {
+	display: block;
+}
+
 /* Tablet Style --------------------------------------------*/
 @media all and (min-width: 46em) {
 	#header {
@@ -96,4 +122,4 @@ a.navitem:hover, a.navitem:active {
 	}
 }
 
-/*END NAVIGATION*/
+/*END NAVIGATION
